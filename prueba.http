@@ -1,0 +1,21 @@
+
+### Crear producto nuevo
+put http://localhost:3000/producto/crear
+Content-Type: application/json
+
+{
+    "nombre":"Cafe pancho",
+    "precio":1500,
+    "stock": 50
+}
+### Actualizar producto existente por id en la url
+PATCH http://localhost:3000/producto/actualizar/10
+Content-Type: application/json
+{
+    "precio": 2000
+}
+### obtener todos los productos activos.
+GET http://localhost:3000/producto/productos
+### ELIMINAR (Desctivar) producto por id en la url.
+PATCH http://localhost:3000/producto/eliminarActivar/1
+
