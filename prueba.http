@@ -4,13 +4,14 @@ put http://localhost:3000/producto/crear
 Content-Type: application/json
 
 {
-    "nombre":"Cafe pancho",
+    "nombre":"Cafe pancho1",
     "precio":1500,
     "stock": 50
 }
 ### Actualizar producto existente por id en la url
 PATCH http://localhost:3000/producto/actualizar/10
 Content-Type: application/json
+
 {
     "precio": 2000
 }
@@ -18,4 +19,22 @@ Content-Type: application/json
 GET http://localhost:3000/producto/productos
 ### ELIMINAR (Desctivar) producto por id en la url.
 PATCH http://localhost:3000/producto/eliminarActivar/1
+
+### crearventa
+PUT  http://localhost:3000/venta/crearVenta/1
+Content-Type: application/json
+
+{
+    "data":[{
+        "id": 2,
+        "cantidad":3,
+        "precio":2500
+    },
+    {
+        "id_producto": 6,
+        "cantidad":1,
+        "precio":1500
+    }
+    ]
+}
 

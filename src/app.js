@@ -2,6 +2,7 @@ import express from 'express'
 import connection from './database/db.js'
 import {seederCliente,seederProducto} from './database/seeder.js'
 import productoRouter from './routes/producto.js'
+import ventaRouter from './routes/venta.js'
 const app = express()
 
 const PORT = 3000
@@ -22,6 +23,7 @@ Función para ejecutar el seeder correspondiente.
  Middelwares que nos redirige hacia las rutas de producto con la sub ruta de /productos
 */
  app.use('/producto',productoRouter)
+ app.use('/venta', ventaRouter)
 
 process.on('SIGINT', async()=>{
     console.log("Cerrando")
